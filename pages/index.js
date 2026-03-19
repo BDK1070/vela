@@ -371,52 +371,33 @@ export default function App() {
 
         {/* ── NAV ─────────────────────────────────────────── */}
         <nav className="nav">
-          <div className="nav-inner">
-            <div className="nav-logo">
-              <span className="logo-v">V</span>ela<span className="logo-dot">.</span>
-            </div>
+  <div className="nav-inner">
+    <div className="nav-logo">
+      <span className="logo-v">V</span>ela<span className="logo-dot">.</span>
+    </div>
 
-            <div className="nav-search">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
-              <input
-                placeholder="Search talent, location…"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-            </div>
+    <div className="nav-search">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+      <input
+        placeholder="Search talent, location…"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
 
-            <a
-              href="/login"
-              className="nav-login-link"
-            >
-              Provider login
-            </a>
+    <a href="/login" className="nav-login">
+      Provider login
+    </a>
 
-            <button className="nav-cta" onClick={() => setShowList(true)}>
-              List Your Service
-            </button>
-          </div>
-          <style jsx>{`
-            .nav-login-link {
-              font-size: 13px;
-              color: var(--muted);
-              text-decoration: none;
-              background: none;
-              border: none;
-              padding: 0 10px;
-              cursor: pointer;
-              transition: color 0.15s;
-              align-self: center;
-            }
-            .nav-login-link:hover {
-              color: var(--ink);
-            }
-          `}</style>
-        </nav>
-
+    <button className="nav-cta" onClick={() => setShowList(true)}>
+      List Your Service
+    </button>
+  </div>
+</nav>
+    
         {/* ── HERO ────────────────────────────────────────── */}
         <section className="hero">
           <div className="hero-inner">
@@ -668,6 +649,16 @@ export default function App() {
           background: var(--charge);
           color: var(--ink);
         }
+
+       .nav-login {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.nav-login:hover { color: var(--ink); }
 
         /* ─────────────────────────────────────────────────
            HERO
