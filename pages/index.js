@@ -388,10 +388,33 @@ export default function App() {
               />
             </div>
 
+            <a
+              href="/login"
+              className="nav-login-link"
+            >
+              Provider login
+            </a>
+
             <button className="nav-cta" onClick={() => setShowList(true)}>
               List Your Service
             </button>
           </div>
+          <style jsx>{`
+            .nav-login-link {
+              font-size: 13px;
+              color: var(--muted);
+              text-decoration: none;
+              background: none;
+              border: none;
+              padding: 0 10px;
+              cursor: pointer;
+              transition: color 0.15s;
+              align-self: center;
+            }
+            .nav-login-link:hover {
+              color: var(--ink);
+            }
+          `}</style>
         </nav>
 
         {/* ── HERO ────────────────────────────────────────── */}
